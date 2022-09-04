@@ -19,6 +19,7 @@ func NewImportWorker[T any](chanLength int) *ImportWorker[T] {
 	}
 }
 
+// Consume takes tasks from workers. It is a sync call
 func (w *ImportWorker[T]) Consume(ctx context.Context, workerFunc ConsumerFunc[T]) {
 	go func() {
 		w.wg.Wait()

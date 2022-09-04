@@ -38,6 +38,7 @@ func (w *ExportWorker[T]) Consume(ctx context.Context, consumerFunc ConsumerFunc
 	}
 }
 
+// Produce generates tasks for worker. It is a sync call
 func (w *ExportWorker[T]) Produce(ctx context.Context, generator ProducerFunc[T]) {
 	generator(ctx, w.tasks)
 	close(w.tasks)

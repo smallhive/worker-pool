@@ -13,7 +13,7 @@ scratch. Eventually decided to create separated package for these tasks
 ## Installation
 
 ```shell
-go get github.com/smallhive/worker-pool
+go get github.com/smallhive/worker-pool@latest
 ```
 
 ## One source and few workers
